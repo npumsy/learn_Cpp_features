@@ -1,0 +1,6 @@
+features_Cpp/build
+Threading_In_CPlusPlus/build
+cpp_multi_thread/build
+# Prerequisites
+*.d
+*.kdev4
