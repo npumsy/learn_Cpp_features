@@ -18,11 +18,9 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
-# 收集源文件
-file(GLOB SOURCES "src/*.cu")
 
 # 创建可执行文件
-cuda_add_executable(${PROJECT_NAME} ${SOURCES})
+cuda_add_executable(${PROJECT_NAME} "src/print_index.cu")
 
 # 添加链接库
 target_link_libraries(${PROJECT_NAME}
@@ -31,5 +29,12 @@ target_link_libraries(${PROJECT_NAME}
 
 # 设置CUDA编译选项
 set_target_properties(${PROJECT_NAME} PROPERTIES
+    CUDA_SEPARABLE_COMPILATION ON
+)
+
+# 创建可执行文件
+cuda_add_executable(add_test "src/add_kernal.cu")
+target_link_libraries(add_test    ${CUDA_LIBRARIES})
+set_target_properties(add_test PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
 )

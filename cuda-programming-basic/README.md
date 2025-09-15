@@ -4,6 +4,10 @@
 
 This is from [tensorrt_starter\chapter2-cuda-programming](https://github.com/kalfazed/tensorrt_starter).
 
+for more tutorial, see 
+1. https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html
+2. https://developer.nvidia.com/blog/even-easier-introduction-cuda/
+
 ## 目录结构
 
 - 2.1-dim_and_index ：展示CUDA的线程索引和维度概念

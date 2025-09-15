@@ -1,0 +1,3 @@
+[submodule "intro-cuda"]
+	path = intro-cuda
+	url = https://gitcode.com/NICAI001/cuda-test.git
