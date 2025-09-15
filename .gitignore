@@ -1,6 +1,19 @@
 features_Cpp/build
 Threading_In_CPlusPlus/build
 cpp_multi_thread/build
+cuda-programming-basic/2.1-dim_and_index/build
+cuda-programming-basic/2.2-cpp_cuda_interactive/build
+cuda-programming-basic/2.3-matmul-basic/build
+cuda-programming-basic/2.4-error-handler/build
+cuda-programming-basic/2.5-device-info/build
+cuda-programming-basic/2.6-nsight-system-and-compute/build
+cuda-programming-basic/2.7-matmul-shared-memory/build
+cuda-programming-basic/2.8-bank-conflict/build
+cuda-programming-basic/2.9-stream-and-event/build
+cuda-programming-basic/2.10-bilinear-interpolation/build
+cuda-programming-basic/2.11-bilinear-interpolation-template/build
+cuda-programming-basic/2.12-affine-transformation/build
 # Prerequisites
 *.d
 *.kdev4
+cuda-programming-basic/data/*.png
