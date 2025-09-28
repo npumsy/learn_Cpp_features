@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.10)
+project(main)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0 -ggdb -fno-omit-frame-pointer -fno-optimize-sibling-calls")
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+# include_directories(${PROJECT_SOURCE_DIR}/../leetcode-debug)
+
+# 测试链表递归
+# add_executable(test testnodelist.cpp)
+
+# add_executable(main 976maxedges.cpp)
+# add_executable(main 88mergevector.cpp)
+add_executable(main 27reomvearray_val.cpp)

@@ -1,39 +1,29 @@
-#include <iostream>
-#include <vector>
+
+
+#include "../leetcode-debug/header.h"
+
 using namespace std;
-
-//  Definition for singly-linked list.
- struct ListNode {
-     int val;
-     ListNode *next;
-     ListNode() : val(0), next(nullptr) {}
-     ListNode(int x) : val(x), next(nullptr) {}
-     ListNode(int x, ListNode *next) : val(x), next(next) {}
- };
-
 
 class Solution {
 public:
-    vector<int> reverseBookList(ListNode* head) {
-        vector<int> vc;
-        cal(head, vc);
-        return vc;
+    ListNode* trainningPlan(ListNode* head) {
+        return recur(nullptr, head);
     }
-    void cal(ListNode* p,vector<int> &in){
-        if(p->next){
-            p=p->next;
-            cal(p,in);
-        }else{
-            in.push_back(p->val);
-        }
-        
+    ListNode* recur(ListNode* pre, ListNode* cur){
+        if(!cur)return pre;
+        ListNode* res = recur(cur,cur->next);
+        cur->next=pre;
+        return res;
     }
 };
-int main(){
-    Solution s;
-    ListNode* head = new ListNode(1);
-    head = head->next = new ListNode(2);
-    
-    s.reverseBookList(head);
-    return 0;
+
+#define REGISTER(func) exc.registerMemberFunction(#func, &Solution::func);
+
+int main() {
+// Excecutor的第一个模板参数为类名，第二个模板参数为false；
+  Excecutor<Solution, true> exc("/mnt/f/Develop/learn_Cpp_features/leecode/testcases.txt");
+  exc.instance = exc.createInstance<void>();
+
+  REGISTER(trainningPlan)
+  exc.run();
 }

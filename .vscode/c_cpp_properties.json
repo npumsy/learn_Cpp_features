@@ -8,7 +8,8 @@
                 "/usr/include/**",
                 "/usr/local/include/**",
                 "/usr/include/eigen3/**",
-                "/usr/local/include/ceres/**"
+                "/usr/local/include/ceres/**",
+                "${workspaceFolder}/leetcode-debug/**"
                 // "/home/msy/Documents/supervins_ws/ceres-solver/build-old/ceres/include/**" // 这个对应指定旧版本的ceres
             ],
             "defines": [
@@ -16,7 +17,7 @@
             ],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu11",
-            "cppStandard": "gnu++14",
+            "cppStandard": "gnu++17",
             "intelliSenseMode": "linux-gcc-x64"
         }
     ],

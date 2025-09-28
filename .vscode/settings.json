@@ -75,11 +75,15 @@
         "variant": "cpp",
         "bit": "cpp",
         "forward_list": "cpp",
-        "dense": "cpp"
+        "dense": "cpp",
+        "codecvt": "cpp",
+        "filesystem": "cpp",
+        "future": "cpp"
     },
     // "cmake.sourceDirectory": "/home/msy/Documents/uwb-imu_ws/src/uwb-imu-positioning/uwb-imu-positioning",
     "C_Cpp.clang_format_fallbackStyle": "LLVM",
     "[cpp]": {
         "editor.defaultFormatter": "ms-vscode.cpptools"
-    }
+    },
+    "ros.distro": "noetic"
 }

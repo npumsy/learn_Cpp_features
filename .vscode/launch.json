@@ -2,13 +2,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug launch UWB-IMU node",
+            "name": "Debug C++ exe",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/devel/lib/uwb_imu_positioning/uwb_imu_node",  // 根据实际可执行文件路径调整
+            "program": "${workspaceFolder}/leecode/build/main",  // 根据实际可执行文件路径调整
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/leecode/build",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
