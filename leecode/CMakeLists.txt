@@ -11,4 +11,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # add_executable(main 976maxedges.cpp)
 # add_executable(main 88mergevector.cpp)
-add_executable(main 27reomvearray_val.cpp)
+# add_executable(main 27reomvearray_val.cpp)
+# add_executable(main ordereven.cpp)
+add_executable(main continuearrays.cpp)
