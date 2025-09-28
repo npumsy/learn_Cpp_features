@@ -19,3 +19,4 @@ cuda-programming-basic/2.12-affine-transformation/build
 cuda-programming-basic/data/*.png
 
 intro-cuda/build
+intro-cuda

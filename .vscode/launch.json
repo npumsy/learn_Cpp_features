@@ -1,0 +1,62 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug launch UWB-IMU node",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/devel/lib/uwb_imu_positioning/uwb_imu_node",  // 根据实际可执行文件路径调整
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "Attach to ROS Node uwb_imu_node via gdbserver",
+            "type": "cppdbg",
+            "program": "${workspaceFolder}/devel/lib/uwb_imu_positioning/uwb_imu_node",
+            "request": "launch",         // 注意：用 launch，不是 attach
+            "miDebuggerServerAddress": "localhost:11457",  // VSCode 连 gdbserver
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "ROSCONSOLE_MIN_SEVERITY",
+                    "value": "Debug"
+                }
+            ],
+            "externalConsole": false
+        },
+        {
+            "name": "ROS: Attach to uwb_imu_node",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceFolder}/devel/lib/uwb_imu_positioning/uwb_imu_node",
+            // "processId": "${command:pickProcess}",
+            "MIMode": "gdb",
+            // "stopAtEntry": true,  // 连接后会在入口处暂停，方便设置断点
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerServerAddress": "localhost:11457",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "miDebuggerArgs": "--quiet"
+        }
+    ]
+}

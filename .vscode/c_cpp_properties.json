@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/ros/noetic/include/**",
+                "/usr/include/**",
+                "/usr/local/include/**",
+                "/usr/include/eigen3/**",
+                "/usr/local/include/ceres/**"
+                // "/home/msy/Documents/supervins_ws/ceres-solver/build-old/ceres/include/**" // 这个对应指定旧版本的ceres
+            ],
+            "defines": [
+                "ROS_NOETIC"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
