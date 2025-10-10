@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class Solution {
+class Solution0 {
 private:
 
 /**
@@ -95,6 +95,41 @@ public:
         return total;
     }
 
+};
+class Solution {
+public:
+    int networkDelayTime(vector<vector<int>>& times, int n, int k) {
+        // 构造矩阵
+        int inf = INT_MAX / 2;
+        vector<vector<int>> g(n, vector<int>(n, inf));
+        for (auto& time : times) {
+            g[time[0] - 1][time[1] - 1] = time[2];
+        }
+
+        vector<int> dist(n, inf);
+        dist[k - 1] = 0;
+        vector<bool> used(n, false);
+
+        // 循环 n 次，每次确定一个节点  
+        for (int i = 0; i < n; i += 1) {
+            // 确定本次更新的节点（距离最近）
+            int x = -1;
+            for (int y = 0; y < n; y += 1) {
+                if (!used[y] && (x == -1 || dist[y] < dist[x])) {
+                    x = y;
+                }
+            }
+            used[x] = true;
+            
+            // 更新到其他节点最小的距离
+            for (int y = 0; y < n; y += 1) {
+                dist[y] = min(dist[y], g[x][y] + dist[x]);
+            }
+        }
+
+        int ans = *max_element(dist.begin(), dist.end());
+        return ans == inf ? -1 : ans;
+    }
 };
 #define REGISTER(func) exc.registerMemberFunction(#func, &Solution::func);
 

@@ -17,4 +17,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # add_executable(main multiarray.cpp)
 # add_executable(main 160mergeNodelist.cpp)
 # add_executable(main 2300spells_potion.cpp)
-add_executable(main 743networkGraph.cpp)
+
+# graph
+# add_executable(main 743networkGraph.cpp)
+add_executable(main 787cheapflightskstops.cpp)
